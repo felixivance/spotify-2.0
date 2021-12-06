@@ -4,7 +4,7 @@ import { HomeIcon, SearchIcon, LibraryIcon, PlusCircleIcon, HeartIcon, RssIcon }
 function Sidebar() {
     return (
         <div>
-            <div className="p-5 text-sm border-r border-gray-900">
+            <div className="p-5 text-sm border-r border-gray-900 space-y-4">
                 <button className="flex items-center space-x-2 hover:text-white hover:cursor-pointer text-gray-500">
                     <HomeIcon className="h-5" />
                     <p>Home</p>
@@ -31,6 +31,8 @@ function Sidebar() {
                     <p>Your Episodes</p>
                 </button>
                 <hr className="border-t-[0,1px] border-gray-900"/>
+
+                {/* playlists */}
             </div>
         </div>
     )
