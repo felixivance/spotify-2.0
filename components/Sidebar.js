@@ -7,7 +7,7 @@ function Sidebar() {
     console.log(session);
     return (
         <div>
-            <div className="p-5 text-sm border-r border-gray-900 space-y-4 text-gray-500">
+            <div className="p-5 text-sm border-r border-gray-900 space-y-4 text-gray-500 overflow-y-scroll h-screen">
                 <button  onClick={()=>signOut()} className="flex items-center space-x-2 hover:text-white hover:cursor-pointer">
                     <LogoutIcon className="h-5" />
                     <p>Logout</p>
@@ -30,7 +30,7 @@ function Sidebar() {
                     <p>Create Playlist</p>
                 </button>
                 <button className="flex items-center space-x-2 hover:text-white hover:cursor-pointer">
-                    <HeartIcon className="h-5" />
+                    <HeartIcon className="h-5 text-blue-500" />
                     <p>Liked Songs</p>
                 </button>
                 <button className="flex items-center space-x-2 hover:text-white hover:cursor-pointer">
