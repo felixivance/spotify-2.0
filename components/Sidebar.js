@@ -7,7 +7,7 @@ function Sidebar() {
     console.log(session);
     return (
         <div>
-            <div className="p-5 text-sm border-r border-gray-900 space-y-4 text-gray-500 overflow-y-scroll h-screen">
+            <div className="p-5 text-sm border-r border-gray-900 space-y-4 text-gray-500 overflow-y-scroll h-screen scrollbar-hide">
                 <button  onClick={()=>signOut()} className="flex items-center space-x-2 hover:text-white hover:cursor-pointer">
                     <LogoutIcon className="h-5" />
                     <p>Logout</p>
@@ -41,7 +41,7 @@ function Sidebar() {
 
                 {/* playlists */}
                {
-                [ ...Array(10).keys() ].map((i, index)=>
+                [ ...Array(20).keys() ].map((i, index)=>
                     <p className="cursor-pointer hover:text-white" key={index}>
                         Playlist name...
                     </p>
