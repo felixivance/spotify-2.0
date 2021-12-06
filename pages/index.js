@@ -1,6 +1,6 @@
-import Head from 'next/head'
-import Center from '../components/Center'
-import Sidebar from '../components/Sidebar'
+import Head from "next/head";
+import Center from "../components/Center";
+import Sidebar from "../components/Sidebar";
 
 export default function Home() {
   return (
@@ -13,11 +13,10 @@ export default function Home() {
       <main className="flex">
         {/* sidebar */}
         <Sidebar />
-        <Center/>
+        <Center />
       </main>
 
       {/* div for player */}
-      
     </div>
-  )
+  );
 }
