@@ -38,7 +38,7 @@ function Center() {
   console.log(playlist);
 
   return (
-    <div className="flex-grow ">
+    <div className="flex-grow h-screen overflow-y-scroll scrollbar-hide">
       <header className="absolute top-5 right-8">
         <div className="flex items-center bg-clack space-x-3 opacity-90 hover:opacity-80 rounded-full p-1 pr-2 bg-gray-700">
           <img
