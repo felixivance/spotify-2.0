@@ -47,7 +47,7 @@ function Center() {
             alt=""
           />
           <h2 className="text-white">{session?.user.name}</h2>
-          <ChevronDownIcon className="h-5 w-5" />
+          <ChevronDownIcon className="h-5 w-5 text-white" />
         </div>
       </header>
 
