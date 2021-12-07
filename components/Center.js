@@ -34,6 +34,8 @@ function Center() {
     }).catch((error)=> console.log("something went wrong getting the playlist ", error))  
   },[spotifyApi, playlistId])
 
+  console.log(playlist);
+
   return (
     <div className="flex-grow ">
       <header className="absolute top-5 right-8">
@@ -52,7 +54,10 @@ function Center() {
         className={`flex items-end space-x-7 bg-gradient-to-b to-black ${color} h-80 text-white p-8 w-full`}
       >
         <img src={playlist?.images?.[0]?.url} alt="" className="h-44 w-44 shadow-2xl rounded-md" />
-        <p>Hello</p>
+        <div className="flex flex-col">
+            <p>PLAYLIST:</p>
+            <h1 className="text-2xl md:text-3xl xl:text-5xl">{playlist?.name}</h1>
+        </div>
       </section>
     </div>
   );
