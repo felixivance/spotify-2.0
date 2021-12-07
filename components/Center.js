@@ -40,7 +40,7 @@ function Center() {
   return (
     <div className="flex-grow ">
       <header className="absolute top-5 right-8">
-        <div className="flex items-center bg-clack space-x-3 opacity-90 hover:opacity-80 rounded-full p-1 pr-2 bg-black">
+        <div className="flex items-center bg-clack space-x-3 opacity-90 hover:opacity-80 rounded-full p-1 pr-2 bg-gray-700">
           <img
             className="rounded-full w-10 h-10"
             src={session?.user.image}
