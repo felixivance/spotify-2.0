@@ -1,7 +1,10 @@
 function Player() {
     return (
-        <div>
-            
+        <div className="">
+            {/* left */}
+            <div>
+                
+            </div>
         </div>
     )
 }
