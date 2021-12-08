@@ -3,8 +3,12 @@ function Player() {
         <div className="">
             {/* left */}
             <div>
-                
+
             </div>
+            <div>
+
+            </div>
+            
         </div>
     )
 }
