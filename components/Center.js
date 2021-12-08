@@ -57,7 +57,7 @@ function Center() {
       >
         <img src={playlist?.images?.[0]?.url} alt="" className="h-44 w-44 shadow-2xl rounded-md" />
         <div className="flex flex-col">
-            <p>PLAYLIST</p>
+            <p className="tracking-wider">PLAYLIST</p>
             <h1 className="text-2xl md:text-3xl xl:text-5xl font-bold">{playlist?.name}</h1>
         </div>
       </section>
