@@ -33,9 +33,10 @@ function Sidebar() {
 
   return (
     <div>
-      <div className="p-5 text-xs sm:text-sm border-r border-gray-900 space-y-4 text-gray-500 overflow-y-scroll h-screen scrollbar-hide
-      sm:max-w-[12rem] lg:max-w-[15rem] hidden sm:inline-flex sm:flex-col">
-       
+      <div
+        className="p-5 text-xs sm:text-sm border-r border-gray-900 space-y-4 text-gray-500 overflow-y-scroll h-screen scrollbar-hide
+      sm:max-w-[12rem] lg:max-w-[15rem] hidden sm:inline-flex sm:flex-col"
+      >
         <button className="flex items-center space-x-2 hover:text-white hover:cursor-pointer">
           <HomeIcon className="h-5" />
           <p>Home</p>
@@ -71,7 +72,11 @@ function Sidebar() {
           //     </p>
           // )
           playlists.map((playlist, index) => (
-            <p className="cursor-pointer hover:text-white" key={index} onClick={()=>setPlaylistId(playlist.id)}>
+            <p
+              className="cursor-pointer hover:text-white"
+              key={index}
+              onClick={() => setPlaylistId(playlist.id)}
+            >
               {playlist.name}
             </p>
           ))
