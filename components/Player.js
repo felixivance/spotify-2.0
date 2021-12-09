@@ -14,12 +14,15 @@ function Player() {
     const [ volume, setVolume] = useState(50);
 
     const songInfo = useSongInfo();
-    
+
+    console.log("song info");
+    console.log(songInfo);
+
     return (
         <div className="">
             {/* left */}
             <div>
-
+                <img className="hidden md:inline-flex h-10 w-10" src={songInfo?.album?.images?.[0]?.url} alt=""/>
             </div>
             <div>
 
