@@ -1,4 +1,9 @@
+import useSpotify from "../hooks/useSpotify";
+
 function Player() {
+
+    const spotifyApi = useSpotify();
+
     return (
         <div className="">
             {/* left */}
