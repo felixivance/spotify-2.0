@@ -4,8 +4,8 @@ import useSpotify from "../hooks/useSpotify";
 import { currentTrackIdState, isPlayingState } from '../atoms/songAtom';
 import { useEffect, useState } from "react";
 import useSongInfo from "../hooks/useSongInfo";
-import {  SwitchHorizontalIcon, HeartIcon, VolumeUpIcon as VolumeDownIcon, PlayIcon } from "@heroicons/react/outline";
-import { RewindIcon, FastForwardIcon, PauseIcon, ReplyIcon, VolumeUpIcon } from "@heroicons/react/solid";
+import {  SwitchHorizontalIcon, HeartIcon, VolumeUpIcon as VolumeDownIcon, } from "@heroicons/react/outline";
+import { RewindIcon, FastForwardIcon, PauseIcon, ReplyIcon, VolumeUpIcon,PlayIcon } from "@heroicons/react/solid";
 
 function Player() {
 
@@ -39,15 +39,17 @@ function Player() {
     },[currentTrackIdState, spotifyApi, session])
 
     const handlePlayPause=()=>{
-        spotifyApi.getMyCurrentPlaybackState().then((data)=>{
-            if(data.body.is_playing){
-                spotifyApi.pause();
-                setIsPlaying(false);
-            }else{
-                spotifyApi.play();
-                setIsPlaying(true);
-            }
-        })
+
+        isPlayingState ? setIsPlaying(false) : setIsPlaying(true);
+        // spotifyApi.getMyCurrentPlaybackState().then((data)=>{
+        //     if(data.body.is_playing){
+        //         // spotifyApi.pause();
+        //         setIsPlaying(false);
+        //     }else{
+        //         // spotifyApi.play();
+        //         setIsPlaying(true);
+        //     }
+        // })
     }
 
     return (
