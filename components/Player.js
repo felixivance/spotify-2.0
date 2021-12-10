@@ -128,7 +128,7 @@ function Player() {
           value={volume}
           min={0}
           max={100}
-          onChange={() => setVolume(Number(e.target.value))}
+          onChange={() => setVolume(Number(event.target.value))}
         />
         <VolumeUpIcon
           onClick={() => volume < 100 && setVolume(volume + 10)}
