@@ -38,7 +38,7 @@ function Song({ order, track }) {
       <div className="flex items-center justify-between ml-auto md:ml-0">
         <p className="hidden md:inline w-40">{track.track.album.name}</p>
         <p className="">
-          {millistToMinutesAndSeconds(track.track.duration_ms)}
+          {millisToMinutesAndSeconds(track.track.duration_ms)}
         </p>
       </div>
     </div>
@@ -47,7 +47,7 @@ function Song({ order, track }) {
 
 export default Song;
 
-export function millistToMinutesAndSeconds(millis) {
+export function millisToMinutesAndSeconds(millis) {
   const minutes = Math.floor(millis / 60000);
   const seconds = ((millis % 60000) / 1000).toFixed(0);
   return seconds == 60
