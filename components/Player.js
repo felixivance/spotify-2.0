@@ -84,6 +84,12 @@ function Player() {
                 <ReplyIcon className="h-5 w-5 cursor-pointer hover:scale-125 transition transform duration-100 ease-out" />
             </div>
             
+            {/* right */}
+            <div className="flex items-center space-x-3 md:space-x-4 justify-end pr-5">
+                <VolumeDownIcon className="h-5 w-5 cursor-pointer hover:scale-125 transition transform duration-100 ease-out" />
+                <input type="range" value={volume} min={0} max={100} />
+                <VolumeUpIcon className="h-5 w-5 cursor-pointer hover:scale-125 transition transform duration-100 ease-out" />
+            </div>
             
         </div>
     )
