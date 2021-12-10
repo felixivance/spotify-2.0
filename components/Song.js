@@ -4,8 +4,7 @@ import useSpotify from "../hooks/useSpotify";
 
 function Song({ order, track }) {
   const spotifyApi = useSpotify();
-  const [currentTrackId, setCurrentTrackId] =
-    useRecoilState(currentTrackIdState);
+  const [currentTrackId, setCurrentTrackId] = useRecoilState(currentTrackIdState);
 
   const [isPlaying, setIsPlaying] = useRecoilState(isPlayingState);
 
@@ -20,7 +19,7 @@ function Song({ order, track }) {
 
   return (
     <div
-      className="grid grid-cols-2 text-gray-500 py-3 px-5 hover:bg-gray-900 rounded-lg cursor-pointer"
+      className="grid grid-cols-2 text-gray-500 py-4 px-5 hover:bg-gray-900 rounded-lg cursor-pointer"
       onClick={() => playSong()}
     >
       <div className="flex items-center space-x-4 ">
