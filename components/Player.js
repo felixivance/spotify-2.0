@@ -52,6 +52,10 @@ function Player() {
         // })
     }
 
+    const adjustVolume = ()=>{
+        
+    }
+
     return (
         <div className="text-white bg-gradient-to-b from-black to-gray-900 h-24 grid grid-cols-3 text-xs md:text-base px-2 md:px-8 ">
             {/* left */}
@@ -87,7 +91,8 @@ function Player() {
             {/* right */}
             <div className="flex items-center space-x-3 md:space-x-4 justify-end pr-5">
                 <VolumeDownIcon className="h-5 w-5 cursor-pointer hover:scale-125 transition transform duration-100 ease-out" />
-                <input type="range" value={volume} min={0} max={100} />
+                <input className="w-14 md:w-28" type="range" value={volume} min={0} max={100} 
+                onChange={()=>adjustVolume()}/>
                 <VolumeUpIcon className="h-5 w-5 cursor-pointer hover:scale-125 transition transform duration-100 ease-out" />
             </div>
             
