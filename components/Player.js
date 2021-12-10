@@ -2,7 +2,7 @@ import { useSession } from "next-auth/react";
 import { useRecoilState } from "recoil";
 import useSpotify from "../hooks/useSpotify";
 import { currentTrackIdState, isPlayingState } from "../atoms/songAtom";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import useSongInfo from "../hooks/useSongInfo";
 import {
   SwitchHorizontalIcon,
@@ -17,6 +17,8 @@ import {
   VolumeUpIcon,
   PlayIcon,
 } from "@heroicons/react/solid";
+
+import {debounce } from 'lodash';
 
 function Player() {
   const spotifyApi = useSpotify();
@@ -62,7 +64,21 @@ function Player() {
     // })
   };
 
-  const adjustVolume = () => {};
+  useEffect(()=>{
+    if(volume >0 && volume <100){
+        debouceAdjustVolume(volume);
+    }
+  },[volume])
+
+  const debouceAdjustVolume = useCallback(
+      () => {
+          debounce((volume)=>{
+              console.log("adjusting volume")
+            //   spotifyApi.setVolume(volume).catch((error)=>{});
+          }, 500)
+      },
+      [],
+  )
 
   return (
     <div className="text-white bg-gradient-to-b from-black to-gray-900 h-24 grid grid-cols-3 text-xs md:text-base px-2 md:px-8 ">
@@ -112,10 +128,10 @@ function Player() {
           value={volume}
           min={0}
           max={100}
-          onChange={() => adjustVolume(Number(e.target.value))}
+          onChange={() => setVolume(Number(e.target.value))}
         />
         <VolumeUpIcon
-          onClick={() => volume > 0 && setVolume(volume + 10)}
+          onClick={() => volume < 100 && setVolume(volume + 10)}
           className="h-5 w-5 cursor-pointer hover:scale-125 transition transform duration-100 ease-out"
         />
       </div>
