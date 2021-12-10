@@ -90,10 +90,14 @@ function Player() {
             
             {/* right */}
             <div className="flex items-center space-x-3 md:space-x-4 justify-end pr-5">
-                <VolumeDownIcon className="h-5 w-5 cursor-pointer hover:scale-125 transition transform duration-100 ease-out" />
+                <VolumeDownIcon 
+                onClick={()=> volume > 0 && setVolume(volume-10) }
+                className="h-5 w-5 cursor-pointer hover:scale-125 transition transform duration-100 ease-out" />
                 <input className="w-14 md:w-28" type="range" value={volume} min={0} max={100} 
-                onChange={()=>adjustVolume()}/>
-                <VolumeUpIcon className="h-5 w-5 cursor-pointer hover:scale-125 transition transform duration-100 ease-out" />
+                onChange={()=>adjustVolume(Number(e.target.value))}/>
+                <VolumeUpIcon 
+                    onClick={()=> volume > 0 && setVolume(volume+10) }
+                className="h-5 w-5 cursor-pointer hover:scale-125 transition transform duration-100 ease-out" />
             </div>
             
         </div>
