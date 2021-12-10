@@ -19,8 +19,8 @@ export default function Home({ session }) {
       </main>
 
       {/* div for player */}
-      <div className="flex">
-        <p className="text-white">Hello</p>
+      <div className="sticky bottom-0">
+        
         <Player />
       </div>
     </div>
