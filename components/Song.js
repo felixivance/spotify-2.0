@@ -27,8 +27,7 @@ function Song({ order, track }) {
         <p>{order + 1}</p>
         <img
           className="h-10 w-10 rounded-md"
-          src={track.track.album.images[0].url}
-          alt=""
+          src={track.track.album.images[0].url} alt=""
         />
         <div>
           <p className="w-36 lg:w-64 truncate text-white">{track.track.name}</p>
